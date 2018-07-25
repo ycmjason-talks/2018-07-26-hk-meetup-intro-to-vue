@@ -1,15 +1,7 @@
+import Vue from 'vue';
+import App from './App.vue';
+
 new Vue({
   el: '#app',
-  created() {
-    this.src = localStorage.getItem('src');
-  },
-  data: {
-    src: '',
-  },
-  methods: {
-    onInput(e) {
-      localStorage.setItem('src', this.src);
-    },
-    marked: window.marked,
-  },
+  render: h => h(App),
 });
